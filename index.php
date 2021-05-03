@@ -1,8 +1,11 @@
 <?php
+
 print `ifconfig`;
 
+{%  for  hosts  in groups['dbserver']  %}
+    $hostname = '{{ hosts }}'
+{% endfor %}
 
-$hostname = 'localhost';
 	$username = 'root';
 	$password = 'PasswordSecreta';
 	$database = 'testdb';
