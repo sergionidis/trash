@@ -2,9 +2,9 @@
 
 print `ifconfig`;
 
-{%  for  hosts  in groups['dbserver']  %}
-    $hostname = '{{ hosts }}'
-{% endfor %}
+
+    $hostname = groups['dbserver']
+
 
 	$username = 'root';
 	$password = 'PasswordSecreta';
